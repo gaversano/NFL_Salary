@@ -22,7 +22,7 @@ def results():
         name = request.form['player_name']
         team = request.form['player_team']
         
-        render_template('results.html', name = name, team = team)
+        return render_template('results.html', name = name, team = team)
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support

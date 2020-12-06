@@ -11,7 +11,7 @@ def index():
     data = pd.read_csv("madden21_ratings.csv")
     
     names = data["Full Name"].unique()
-    teams = data["Teams"].unique()
+    teams = data["Team"].unique()
     
     return render_template('index.html', names = names, teams = teams)
 

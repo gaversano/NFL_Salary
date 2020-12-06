@@ -15,6 +15,15 @@ def index():
     
     return render_template('index.html', names = names, teams = teams)
 
+@app.route('/results.html', methods=['POST'])
+def results():
+    if request.method == 'POST':
+        
+        name = request.form['player_name']
+        team = request.form['player_team']
+        
+        render_template('results.html', name = name, team = team)
+
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
     app.run(threaded=True, port=5000)

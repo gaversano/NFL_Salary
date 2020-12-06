@@ -1,6 +1,18 @@
 <h1>Select your name and your potential future team to get a salary estimate!</h1>
 
-<p>{{names}}</p>
-
-<p>{teams}</p>
+<form method="POST" action="/results.html">
+  <select name="player_name" id="player_name">
+  {for name in names}
+    <option value="{{name}}">{{name}}</option>
+  {% endfor %}
+  </select>
+  
+  <select name="player_team" id="player_team">
+  {for team in teams}
+    <option value="{{team}}">{{team}}</option>
+  {% endfor %}
+  </select>
+  
+  <input type="submit" value="Submit">
+</form>
 

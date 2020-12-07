@@ -1,2 +1,14 @@
-<h1>{{ team }}</h1>
-<h1>{{ name }}</h1>
+<h1>Hi, {{ name }}</h1>
+<h2>Let's see how much you would make playing on the {{ team }} ...</h2>
+
+<h3>Current Salary: $ {{current_salary}}M</h3>
+<h3>New Predicted Salary: $ {{predicted_salary}}M</h3>
+
+{% if predicted_salary > current_salary %}
+<p>Well, time to call your agent ... </p>
+{% else %}
+<p>Maybe you are better off staying put ... </p>
+{% endif %}
+
+<br>
+<a href="index.html">Back</a>

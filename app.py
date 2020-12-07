@@ -4,12 +4,11 @@ app = Flask(__name__)
 
 import pandas as pd
 
+data = pd.read_csv("madden21_ratings.csv")
+
 # A welcome message to test our server
 @app.route('/')
-def index():
-    
-    data = pd.read_csv("madden21_ratings.csv")
-    
+def index():    
     names = data["Full Name"].unique()
     teams = data["Team"].unique()
     

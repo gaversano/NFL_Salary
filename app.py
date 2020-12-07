@@ -6,6 +6,7 @@ import pandas as pd
 #from joblib import load
 import pickle
 from tensorflow import keras
+import sklearn
 
 #Read data and format
 #Purpose is to (1) get list of available players/teams and (2) look up player details for the model prediction 

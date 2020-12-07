@@ -3,7 +3,8 @@ from flask import Flask, request, jsonify, render_template
 app = Flask(__name__)
 
 import pandas as pd
-from joblib import load
+#from joblib import load
+import pickle
 from tensorflow import keras
 
 #Read data and format
@@ -48,7 +49,9 @@ def results():
         
         #Load data processing pipline
         #Scaling and one hot encoding
-        data_pipline = load('data_pipeline.pkl')
+        pipline_file = open('data_pipeline2.pkl', 'rb')
+        data_pipline = pickle.load(pipline_file)
+        pipline_file.close()
         
         #transform the data to prep for prediction
         X_prepared = data_pipline.transform(X)

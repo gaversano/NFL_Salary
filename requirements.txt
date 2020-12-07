@@ -7,6 +7,6 @@ MarkupSafe==1.1.1
 Werkzeug==0.15.6
 pandas==1.1.4
 joblib==0.17.0
-tensorflow==2.3.0
+tensorflow
 pickle
 sklearn

@@ -50,7 +50,7 @@ def results():
         
         #Load data processing pipline
         #Scaling and one hot encoding
-        pipline_file = open('data_pipeline2.pkl', 'rb')
+        pipline_file = open('final_data_pipeline.pkl', 'rb')
         data_pipline = pickle.load(pipline_file)
         pipline_file.close()
         
@@ -58,7 +58,7 @@ def results():
         X_prepared = data_pipline.transform(X)
         
         #Load the model 
-        model = keras.models.load_model('NN_model.h5')
+        model = keras.models.load_model('final_NN_model.h5')
         
         #Make prediction 
         predicted_salary = round(model.predict(X_prepared)[0][0],2)

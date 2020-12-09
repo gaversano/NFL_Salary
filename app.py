@@ -63,7 +63,7 @@ def results():
         #Make prediction 
         predicted_salary = round(model.predict(X_prepared)[0][0],2)
         
-        return render_template('results.html', name = name, team = team, predicted_salary=predicted_salary,current_salary=current_salary)
+        return render_template('results.html', name=name, team=team, predicted_salary=predicted_salary,current_salary=current_salary)
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
